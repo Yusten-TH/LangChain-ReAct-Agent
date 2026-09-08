@@ -1,0 +1,632 @@
+2026-09-07 14:36:26,348 - agent - INFO - logger_handler.py:52 - 信息日志
+2026-09-07 14:36:26,349 - agent - ERROR - logger_handler.py:53 - 错误日志
+2026-09-07 14:36:26,349 - agent - WARNING - logger_handler.py:54 - 警告日志
+2026-09-07 14:36:26,349 - agent - DEBUG - logger_handler.py:55 - 调试日志
+2026-09-07 17:22:05,427 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问.pdf加载失败:pdf_loader() missing 1 required positional argument: 'password'
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 56, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: pdf_loader() missing 1 required positional argument: 'password'
+2026-09-07 17:22:05,431 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt加载失败:Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 54, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt
+2026-09-07 17:22:05,444 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt加载失败:Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 54, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt
+2026-09-07 17:22:05,448 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt加载失败:Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 54, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt
+2026-09-07 17:22:05,451 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt加载失败:Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 54, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt
+2026-09-07 17:22:05,455 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt加载失败:Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+           ^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 54, in get_file_documents
+    return txt_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt
+2026-09-07 17:28:36,145 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问.pdf加载失败:pdf_loader() missing 1 required positional argument: 'password'
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 71, in load_document
+    documents : list[Document] = get_file_documents(path)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 56, in get_file_documents
+    return pdf_loader(read_path)
+           ^^^^^^^^^^^^^^^^^^^^^
+TypeError: pdf_loader() missing 1 required positional argument: 'password'
+2026-09-07 17:28:37,631 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:28:37,694 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:28:37,825 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:28:37,894 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:28:37,964 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:58,732 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问.pdf加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:58,801 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:58,865 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:58,927 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:58,994 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:29:59,061 - agent - ERROR - vector_store.py:87 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt加载失败:status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+Traceback (most recent call last):
+  File "G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\rag\vector_store.py", line 82, in load_document
+    self.vector_store.add_documents(spliter_document)
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_core\vectorstores\base.py", line 258, in add_documents
+    return self.add_texts(texts, metadatas, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_chroma\vectorstores.py", line 627, in add_texts
+    embeddings = self._embedding_function.embed_documents(texts)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 155, in embed_documents
+    embeddings = embed_with_retry(
+                 ^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 83, in embed_with_retry
+    return _embed_with_retry(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "G:\E\pycharm\PycharmProjects\venv\Lib\site-packages\langchain_community\embeddings\dashscope.py", line 70, in _embed_with_retry
+    raise ValueError(
+ValueError: status_code: 400 
+ code: InvalidParameter 
+ message: Model not exist.
+2026-09-07 17:33:01,888 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问.pdf内容加载成功
+2026-09-07 17:33:03,425 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt内容加载成功
+2026-09-07 17:33:05,423 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt内容加载成功
+2026-09-07 17:33:08,862 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt内容加载成功
+2026-09-07 17:33:11,042 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt内容加载成功
+2026-09-07 17:33:13,229 - agent - INFO - vector_store.py:85 - [加载知识库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt内容加载成功
+2026-09-07 17:34:32,501 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问.pdf内容已经存在知识库中,跳过
+2026-09-07 17:34:32,502 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫地机器人100问2.txt内容已经存在知识库中,跳过
+2026-09-07 17:34:32,503 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\扫拖一体机器人100问.txt内容已经存在知识库中,跳过
+2026-09-07 17:34:32,503 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\故障排除.txt内容已经存在知识库中,跳过
+2026-09-07 17:34:32,504 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\维护保养.txt内容已经存在知识库中,跳过
+2026-09-07 17:34:32,505 - agent - INFO - vector_store.py:68 - [加载数据库]G:\E\pycharm\PycharmProjects\LangChain-ReAct-Agent\data\选购指南.txt内容已经存在知识库中,跳过
