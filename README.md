@@ -106,12 +106,12 @@ User Input (Streamlit)
 ### Environment Requirements
 
 - **Python** ≥ 3.10
-- **DashScope API Key**（[Alibaba Cloud Bailian](https://bailian.console.aliyun.com/) 申请）
+- **DashScope API Key**（[Alibaba Cloud Bailian](https://bailian.console.aliyun.com/) ）
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/lhh737/LangChain-ReAct-Agent.git
+git clone https://github.com/Yusten-TH/LangChain-ReAct-Agent.git
 cd LangChain-ReAct-Agent
 ```
 
